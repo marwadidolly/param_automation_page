@@ -137,7 +137,7 @@ body {
    CONTACT HERO — Uses network.jpeg
    FIXED: puri dikhegi, cut nahi hogi
 ========================== */
-.contact-hero {
+/*.contact-hero {
     margin-top: 70px;
     width: 100%;
     height: 50vh;
@@ -152,6 +152,15 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+}*/
+/* CONTACT IMAGE */
+.contact-image{
+width:100%;
+height:350px;
+background:url("network.jpeg") no-repeat center;
+background-size:contain;
+background-color:#f1f5f9;
+cursor:pointer;
 }
 
 .contact-hero-overlay {
