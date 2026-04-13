@@ -143,9 +143,9 @@ body {
     height: 50vh;
     min-height: 240px;
     background-image: url("network.jpeg");
-    background-size: cover;
+   /* background-size: cover;*/
     background-position: center center;
-    background-repeat: no-repeat;
+    /*background-repeat: no-repeat;*/
     background-attachment: scroll;
     background-color: #1a1040;
     position: relative;
@@ -188,9 +188,9 @@ body {
     height: 50vh;
     min-height: 240px;
     background-image: url("1bg.jpeg");
-    background-size: cover;
+    /*background-size: cover;*/
     background-position: center center;
-    background-repeat: no-repeat;
+    /*background-repeat: no-repeat;*/
     background-attachment: scroll;
     background-color: #1a1040;
     position: relative;
