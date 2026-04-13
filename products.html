@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Param Automation</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;700&family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<header class="navbar">
+    <div class="menu-icon" id="menuIcon">&#9776;</div>
+    <div class="logo">
+        <img src="logo1.jpeg" alt="Param Automation Logo">
+    </div>
+    <nav class="nav-links" id="navLinks">
+        <a href="index.html">🏠 Home</a>
+        <a href="products.html" class="active">📦 Product</a>
+        <a href="contact.html">📞 Contact</a>
+    </nav>
+</header>
+
+<!-- ===== PRODUCT HERO ===== -->
+<section class="product-hero">
+    <div class="product-hero-overlay">
+        <h1>Our Products</h1>
+        <p>Smart Solutions for Every Need</p>
+    </div>
+</section>
+
+<!-- ===== CATEGORY CARDS ===== -->
+<section class="categories-section">
+    <h2 class="cat-section-title">Choose a Category</h2>
+    <div class="categories-grid">
+
+        <!-- Digital Motor Starter -->
+        <div class="cat-card" onclick="window.location.href='product-digital-starter.html'">
+            <div class="cat-bg" style="background-image: url('pp.jpeg'); background-color:#3a0ca3;">
+                <div class="cat-overlay starter-overlay"></div>
+                <div class="cat-content">
+                    <span class="cat-icon">⚡</span>
+                    <h3>Digital Motor Starters</h3>
+                    <p>View Products →</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Home Automation -->
+        <div class="cat-card" onclick="window.location.href='product-home-automation.html'">
+            <div class="cat-bg" style="background-image: url('products/home-automation/img1.jpg'); background-color:#7209b7;">
+                <div class="cat-overlay automation-overlay"></div>
+                <div class="cat-content">
+                    <span class="cat-icon">🏠</span>
+                    <h3>Home Automation</h3>
+                    <p>View Products →</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Water Softener -->
+        <div class="cat-card" onclick="window.location.href='product-water-softener.html'">
+            <div class="cat-bg" style="background-image: url('products/water-softener/img1.jpg'); background-color:#0077b6;">
+                <div class="cat-overlay softener-overlay"></div>
+                <div class="cat-content">
+                    <span class="cat-icon">🪣</span>
+                    <h3>Water Softeners</h3>
+                    <p>View Products →</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Water Purifier -->
+        <div class="cat-card" onclick="window.location.href='product-water-purifier.html'">
+            <div class="cat-bg" style="background-image: url('products/water-purifier/img1.jpg'); background-color:#023e8a;">
+                <div class="cat-overlay purifier-overlay"></div>
+                <div class="cat-content">
+                    <span class="cat-icon">💧</span>
+                    <h3>Water Purifiers</h3>
+                    <p>View Products →</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Smart Camera -->
+        <div class="cat-card" onclick="window.location.href='product-smart-camera.html'">
+            <div class="cat-bg" style="background-image: url('products/smart-camera/img1.jpg'); background-color:#1a1a2e;">
+                <div class="cat-overlay camera-overlay"></div>
+                <div class="cat-content">
+                    <span class="cat-icon">📷</span>
+                    <h3>Smart Security Cameras</h3>
+                    <p>View Products →</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+    <p>© 2026 Param Automation. All Rights Reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

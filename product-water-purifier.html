@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Purifiers - Param Automation</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;700&family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="navbar">
+    <div class="menu-icon" id="menuIcon">&#9776;</div>
+    <div class="logo"><img src="logo1.jpeg" alt="Param Automation Logo"></div>
+    <nav class="nav-links" id="navLinks">
+        <a href="index.html">🏠 Home</a>
+        <a href="products.html" class="active">📦 Product</a>
+        <a href="contact.html">📞 Contact</a>
+    </nav>
+</header>
+
+<section class="cat-detail-hero purifier-detail-hero">
+    <div class="cat-detail-overlay">
+        <a href="products.html" class="back-btn">← Back to Products</a>
+        <span class="cat-detail-icon">💧</span>
+        <h1>Water Purifiers</h1>
+        <p>Clean & healthy drinking water solutions</p>
+    </div>
+</section>
+
+<section class="cat-detail-section">
+    <div class="product-container">
+
+        <div class="product purifier">
+            <div class="product-img-wrap">
+                <img src="products/water-purifier/img1.jpg"
+                     onerror="this.src='https://placehold.co/300x220/023e8a/white?text=Purifier+1'"
+                     onclick="openPopup(this.src, 'Water Purifier')" alt="Water Purifier">
+                <div class="zoom-hint">🔍 Click to Zoom</div>
+            </div>
+            <p class="product-name">Water Purifier</p>
+            <button onclick="openBuyPopup('Water Purifier')">🛒 Buy Now</button>
+        </div>
+
+        <div class="product purifier">
+            <div class="product-img-wrap">
+                <img src="products/water-purifier/img2.jpg"
+                     onerror="this.src='https://placehold.co/300x220/0096c7/white?text=Purifier+2'"
+                     onclick="openPopup(this.src, 'RO Purifier')" alt="RO Purifier">
+                <div class="zoom-hint">🔍 Click to Zoom</div>
+            </div>
+            <p class="product-name">RO Purifier</p>
+            <button onclick="openBuyPopup('RO Purifier')">🛒 Buy Now</button>
+        </div>
+
+        <div class="product purifier">
+            <div class="product-img-wrap">
+                <img src="products/water-purifier/img3.jpg"
+                     onerror="this.src='https://placehold.co/300x220/023e8a/white?text=Purifier+3'"
+                     onclick="openPopup(this.src, 'UV Water Purifier')" alt="UV Water Purifier">
+                <div class="zoom-hint">🔍 Click to Zoom</div>
+            </div>
+            <p class="product-name">UV Water Purifier</p>
+            <button onclick="openBuyPopup('UV Water Purifier')">🛒 Buy Now</button>
+        </div>
+
+        <div class="product purifier">
+            <div class="product-img-wrap">
+                <img src="products/water-purifier/img4.jpg"
+                     onerror="this.src='https://placehold.co/300x220/0077b6/white?text=Purifier+4'"
+                     onclick="openPopup(this.src, 'RO+UV+TDS Purifier')" alt="RO+UV+TDS Purifier">
+                <div class="zoom-hint">🔍 Click to Zoom</div>
+            </div>
+            <p class="product-name">RO+UV+TDS Purifier</p>
+            <button onclick="openBuyPopup('RO+UV+TDS Purifier')">🛒 Buy Now</button>
+        </div>
+
+        <div class="product purifier">
+            <div class="product-img-wrap">
+                <img src="products/water-purifier/img5.jpg"
+                     onerror="this.src='https://placehold.co/300x220/0096c7/white?text=Purifier+5'"
+                     onclick="openPopup(this.src, 'Smart Purifier Pro')" alt="Smart Purifier Pro">
+                <div class="zoom-hint">🔍 Click to Zoom</div>
+            </div>
+            <p class="product-name">Smart Purifier Pro</p>
+            <button onclick="openBuyPopup('Smart Purifier Pro')">🛒 Buy Now</button>
+        </div>
+
+    </div>
+</section>
+
+<div id="popup" onclick="closePopupOutside(event)">
+    <div class="popup-inner">
+        <button class="popup-close" onclick="closePopup()">✖</button>
+        <img id="popup-img" src="" alt="Product">
+        <p id="popup-title"></p>
+    </div>
+</div>
+
+<div id="buy-popup" onclick="closeBuyPopupOutside(event)">
+    <div class="buy-popup-inner">
+        <button class="buy-popup-close" onclick="closeBuyPopup()">✖</button>
+        <h2>🛒 Order Now</h2>
+        <p class="product-label" id="buy-product-name">Product Name</p>
+        <div class="pay-tabs">
+            <button class="pay-tab active-tab" onclick="switchTab('qr', this)">📱 UPI / QR Pay</button>
+            <button class="pay-tab" onclick="switchTab('wa', this)">💬 WhatsApp Order</button>
+        </div>
+        <div class="pay-panel active-panel" id="panel-qr">
+            <div class="qr-box">
+                <div class="qr-placeholder"><span>📱</span>QR Code<br>Yahan Aayega</div>
+                <div class="upi-id-box" onclick="copyUPI()" title="Click to copy">paramsoni57@upi</div>
+                <p class="upi-label">👆 UPI ID copy karne ke liye tap karein</p>
+            </div>
+            <p class="buy-popup-note">Payment ke baad screenshot WhatsApp pe bhejein.<br>Hum aapka order confirm karenge. 📦</p>
+        </div>
+        <div class="pay-panel" id="panel-wa">
+            <div class="wa-panel-inner">
+                <p>Apna order seedha WhatsApp pe bhejein.<br>Hum jaldi se jaldi aapko respond karenge. 😊</p>
+                <button class="wa-order-btn" onclick="whatsappOrder()">💬 WhatsApp pe Order Karein</button>
+            </div>
+            <p class="buy-popup-note">WhatsApp order ke saath COD / advance dono available hain.</p>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+    <p>© 2026 Param Automation. All Rights Reserved.</p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

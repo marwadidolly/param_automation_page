@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Automation - Param Automation</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;700&family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="navbar">
+    <div class="menu-icon" id="menuIcon">&#9776;</div>
+    <div class="logo"><img src="logo1.jpeg" alt="Param Automation Logo"></div>
+    <nav class="nav-links" id="navLinks">
+        <a href="index.html">🏠 Home</a>
+        <a href="products.html" class="active">📦 Product</a>
+        <a href="contact.html">📞 Contact</a>
+    </nav>
+</header>
+
+<section class="cat-detail-hero automation-detail-hero">
+    <div class="cat-detail-overlay">
+        <a href="products.html" class="back-btn">← Back to Products</a>
+        <span class="cat-detail-icon">🏠</span>
+        <h1>Home Automation Systems</h1>
+        <p>Smart living for modern homes</p>
+    </div>
+</section>
+
+<section class="cat-detail-section">
+    <div class="product-container">
+
+        <div class="product automation">
+            <div class="product-img-wrap">
+                <img src="products/home-automation/img1.jpg"
+                     onerror="this.src='https://placehold.co/300x220/7209b7/white?text=Home+Auto+1'"
+                     onclick="openPopup(this.src, 'Home Automation System')" alt="Home Automation System">
+                <div class="zoom-hint">🔍 Click to Zoom</div>
+            </div>
+            <p class="product-name">Home Automation System</p>
+            <button onclick="openBuyPopup('Home Automation System')">🛒 Buy Now</button>
+        </div>
+
+        <div class="product automation">
+            <div class="product-img-wrap">
+                <img src="products/home-automation/img2.jpg"
+                     onerror="this.src='https://placehold.co/300x220/b5179e/white?text=Home+Auto+2'"
+                     onclick="openPopup(this.src, 'Smart Switch Panel')" alt="Smart Switch Panel">
+                <div class="zoom-hint">🔍 Click to Zoom</div>
+            </div>
+            <p class="product-name">Smart Switch Panel</p>
+            <button onclick="openBuyPopup('Smart Switch Panel')">🛒 Buy Now</button>
+        </div>
+
+        <div class="product automation">
+            <div class="product-img-wrap">
+                <img src="products/home-automation/img3.jpg"
+                     onerror="this.src='https://placehold.co/300x220/7209b7/white?text=Home+Auto+3'"
+                     onclick="openPopup(this.src, 'Voice Control Hub')" alt="Voice Control Hub">
+                <div class="zoom-hint">🔍 Click to Zoom</div>
+            </div>
+            <p class="product-name">Voice Control Hub</p>
+            <button onclick="openBuyPopup('Voice Control Hub')">🛒 Buy Now</button>
+        </div>
+
+        <div class="product automation">
+            <div class="product-img-wrap">
+                <img src="products/home-automation/img4.jpg"
+                     onerror="this.src='https://placehold.co/300x220/560bad/white?text=Home+Auto+4'"
+                     onclick="openPopup(this.src, 'Smart Lighting System')" alt="Smart Lighting System">
+                <div class="zoom-hint">🔍 Click to Zoom</div>
+            </div>
+            <p class="product-name">Smart Lighting System</p>
+            <button onclick="openBuyPopup('Smart Lighting System')">🛒 Buy Now</button>
+        </div>
+
+        <div class="product automation">
+            <div class="product-img-wrap">
+                <img src="products/home-automation/img5.jpg"
+                     onerror="this.src='https://placehold.co/300x220/b5179e/white?text=Home+Auto+5'"
+                     onclick="openPopup(this.src, 'WiFi Smart Controller')" alt="WiFi Smart Controller">
+                <div class="zoom-hint">🔍 Click to Zoom</div>
+            </div>
+            <p class="product-name">WiFi Smart Controller</p>
+            <button onclick="openBuyPopup('WiFi Smart Controller')">🛒 Buy Now</button>
+        </div>
+
+    </div>
+</section>
+
+<div id="popup" onclick="closePopupOutside(event)">
+    <div class="popup-inner">
+        <button class="popup-close" onclick="closePopup()">✖</button>
+        <img id="popup-img" src="" alt="Product">
+        <p id="popup-title"></p>
+    </div>
+</div>
+
+<div id="buy-popup" onclick="closeBuyPopupOutside(event)">
+    <div class="buy-popup-inner">
+        <button class="buy-popup-close" onclick="closeBuyPopup()">✖</button>
+        <h2>🛒 Order Now</h2>
+        <p class="product-label" id="buy-product-name">Product Name</p>
+        <div class="pay-tabs">
+            <button class="pay-tab active-tab" onclick="switchTab('qr', this)">📱 UPI / QR Pay</button>
+            <button class="pay-tab" onclick="switchTab('wa', this)">💬 WhatsApp Order</button>
+        </div>
+        <div class="pay-panel active-panel" id="panel-qr">
+            <div class="qr-box">
+                <div class="qr-placeholder"><span>📱</span>QR Code<br>Yahan Aayega</div>
+                <div class="upi-id-box" onclick="copyUPI()" title="Click to copy">paramsoni57@upi</div>
+                <p class="upi-label">👆 UPI ID copy karne ke liye tap karein</p>
+            </div>
+            <p class="buy-popup-note">Payment ke baad screenshot WhatsApp pe bhejein.<br>Hum aapka order confirm karenge. 📦</p>
+        </div>
+        <div class="pay-panel" id="panel-wa">
+            <div class="wa-panel-inner">
+                <p>Apna order seedha WhatsApp pe bhejein.<br>Hum jaldi se jaldi aapko respond karenge. 😊</p>
+                <button class="wa-order-btn" onclick="whatsappOrder()">💬 WhatsApp pe Order Karein</button>
+            </div>
+            <p class="buy-popup-note">WhatsApp order ke saath COD / advance dono available hain.</p>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+    <p>© 2026 Param Automation. All Rights Reserved.</p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
